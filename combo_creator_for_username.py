@@ -19,5 +19,6 @@ for line in content:
     user = sys.argv[2]
 
     line_parsed = str(user +  ":" + passwd)
+    print(line_parsed)
     output.write(line_parsed + "\n")
 output.close()
