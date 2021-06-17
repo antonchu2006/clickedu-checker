@@ -1,7 +1,7 @@
 [SETTINGS]
 {
   "Name": "ClickEdu Bruteforcer",
-  "SuggestedBots": 50,
+  "SuggestedBots": 2,
   "MaxCPM": 0,
   "LastModified": "2021-06-16T21:41:55.0738499-07:00",
   "AdditionalInfo": "",
