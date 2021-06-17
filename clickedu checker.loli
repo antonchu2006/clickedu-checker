@@ -9,7 +9,7 @@
   "Version": "1.4.4 [Anomaly]",
   "IgnoreResponseErrors": false,
   "MaxRedirects": 8,
-  "NeedsProxies": false,
+  "NeedsProxies": true,
   "OnlySocks": false,
   "OnlySsl": false,
   "MaxProxyUses": 0,
